@@ -1,0 +1,156 @@
+body{
+    background: #000;
+    padding: 0;
+    margin: 0;
+    line-height: 150%;
+    color: white;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    font-family: 'pokemon-font', monospace;
+    opacity: 0.8;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+h2{
+    color: white;
+    text-align: center;
+    margin: 50px 0;
+}
+p{
+    margin: 0;
+    color: white;
+}
+meter{
+    width: 60%;
+}
+input{
+    outline: none;
+    font-family : inherit;
+}
+img{
+    width: 100%;
+}
+.site-width{
+    width: 50%;
+    margin: 100px auto;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.status{
+    width: 50%;
+    border: 1px solid white;
+    text-align: right;
+}
+.btn{
+    background: #000;
+    border: 1px solid white;
+    color: white;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.partner-group{
+    margin-right: 10px;
+    width: 30%;
+    box-sizing: border-box;
+    
+}
+.partner-group:hover{
+    opacity: 0.75;
+}
+.partner-group.active{
+    opacity: 0.6;
+}
+.partner-group img{
+    cursor: pointer;
+}
+.btn-container{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+input[type="radio"]{
+    display: none;
+}
+.battle-img{
+    width: 40%;
+}
+.enemy-container{
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.enemy-status{
+    padding: 30px 20px;
+    align-self: flex-start;
+}
+.enemy-status p{
+    text-align: left;
+}
+.partner-container{
+    justify-content: space-between;
+}
+.partner-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.partner-status{
+    align-self: center;
+    padding: 20px;
+}
+.partner-status p{
+    text-align: left;
+}
+.historyAndAction{
+    width: 100%;
+    height: 136px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+    margin-top: 10px;
+}
+.history{
+    width: 60%;
+    height: 100%;
+    border-right: double white;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.choice-action{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    position: relative;
+    width: 40%;
+}
+.choice-action .btn-container{
+    width: 50%;
+    margin: 0;
+    position: relative;
+}
+.choice-action .btn-container span{
+    display: none;
+    position: absolute;
+    top: 18px;
+    left: 14px
+}
+.choice-action .btn-container:hover span{
+    display: block;
+}
+.choice-action .btn-container .btn{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    border: none;
+}
+.defeat-number{
+    text-align: center; 
+    margin-top: 50px;
+}

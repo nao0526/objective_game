@@ -1,0 +1,82 @@
+[03-Oct-2019 10:51:04 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function createMonster() in /Applications/MAMP/htdocs/portfolio03/index.php:107
+Stack trace:
+#0 /Applications/MAMP/htdocs/portfolio03/index.php(112): init()
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/portfolio03/index.php on line 107
+[03-Oct-2019 10:51:36 Asia/Tokyo] PHP Notice:  Undefined index: partner in /Applications/MAMP/htdocs/portfolio03/index.php on line 113
+[03-Oct-2019 10:52:07 Asia/Tokyo] PHP Notice:  Undefined index: partner3 in /Applications/MAMP/htdocs/portfolio03/index.php on line 113
+[03-Oct-2019 10:52:31 Asia/Tokyo] PHP Notice:  Undefined index: partner in /Applications/MAMP/htdocs/portfolio03/index.php on line 114
+[03-Oct-2019 10:58:40 Asia/Tokyo] PHP Notice:  Undefined variable: viewEnemy in /Applications/MAMP/htdocs/portfolio03/index.php on line 115
+[03-Oct-2019 11:07:37 Asia/Tokyo] PHP Notice:  Undefined variable: viewPartner in /Applications/MAMP/htdocs/portfolio03/index.php on line 82
+[03-Oct-2019 11:07:59 Asia/Tokyo] PHP Notice:  Undefined variable: viewPartner in /Applications/MAMP/htdocs/portfolio03/index.php on line 82
+[03-Oct-2019 11:08:17 Asia/Tokyo] PHP Notice:  Undefined variable: viewPartner in /Applications/MAMP/htdocs/portfolio03/index.php on line 82
+[03-Oct-2019 11:08:19 Asia/Tokyo] PHP Notice:  Undefined variable: viewPartner in /Applications/MAMP/htdocs/portfolio03/index.php on line 82
+[03-Oct-2019 11:08:22 Asia/Tokyo] PHP Notice:  Undefined variable: viewPartner in /Applications/MAMP/htdocs/portfolio03/index.php on line 82
+[03-Oct-2019 11:08:39 Asia/Tokyo] PHP Notice:  Undefined variable: viewPartner in /Applications/MAMP/htdocs/portfolio03/index.php on line 82
+[03-Oct-2019 11:10:40 Asia/Tokyo] PHP Notice:  Undefined variable: viewPartner in /Applications/MAMP/htdocs/portfolio03/index.php on line 82
+[03-Oct-2019 11:12:21 Asia/Tokyo] PHP Notice:  Undefined variable: viewPartner in /Applications/MAMP/htdocs/portfolio03/index.php on line 82
+[03-Oct-2019 11:19:16 Asia/Tokyo] PHP Notice:  Undefined index: enemy_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 172
+[03-Oct-2019 11:19:16 Asia/Tokyo] PHP Notice:  Undefined index: enemy_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 173
+[03-Oct-2019 11:19:16 Asia/Tokyo] PHP Notice:  Undefined index: enemy_maxhp in /Applications/MAMP/htdocs/portfolio03/index.php on line 173
+[03-Oct-2019 11:19:16 Asia/Tokyo] PHP Notice:  Undefined index: enemy_img in /Applications/MAMP/htdocs/portfolio03/index.php on line 176
+[03-Oct-2019 11:19:16 Asia/Tokyo] PHP Notice:  Undefined index: partner_img in /Applications/MAMP/htdocs/portfolio03/index.php on line 182
+[03-Oct-2019 11:19:16 Asia/Tokyo] PHP Notice:  Undefined index: partner_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 185
+[03-Oct-2019 11:19:16 Asia/Tokyo] PHP Notice:  Undefined index: partner_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 186
+[03-Oct-2019 11:19:16 Asia/Tokyo] PHP Notice:  Undefined index: partner_maxhp in /Applications/MAMP/htdocs/portfolio03/index.php on line 186
+[03-Oct-2019 11:19:16 Asia/Tokyo] PHP Notice:  Undefined index: partner_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 187
+[03-Oct-2019 11:21:39 Asia/Tokyo] PHP Warning:  A non-numeric value encountered in /Applications/MAMP/htdocs/portfolio03/index.php on line 116
+[03-Oct-2019 11:21:39 Asia/Tokyo] PHP Warning:  A non-numeric value encountered in /Applications/MAMP/htdocs/portfolio03/index.php on line 116
+[03-Oct-2019 11:21:59 Asia/Tokyo] PHP Warning:  A non-numeric value encountered in /Applications/MAMP/htdocs/portfolio03/index.php on line 116
+[03-Oct-2019 11:21:59 Asia/Tokyo] PHP Warning:  A non-numeric value encountered in /Applications/MAMP/htdocs/portfolio03/index.php on line 116
+[03-Oct-2019 14:08:43 Asia/Tokyo] PHP Notice:  Undefined index: partner_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 185
+[03-Oct-2019 14:10:20 Asia/Tokyo] PHP Notice:  Undefined index: partner_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 185
+[03-Oct-2019 14:10:46 Asia/Tokyo] PHP Notice:  Undefined index: partner_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 185
+[03-Oct-2019 14:10:53 Asia/Tokyo] PHP Notice:  Undefined index: partner_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 185
+[03-Oct-2019 14:27:31 Asia/Tokyo] PHP Notice:  Undefined index: partner_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 131
+[03-Oct-2019 14:27:31 Asia/Tokyo] PHP Notice:  Undefined index: partner_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 132
+[03-Oct-2019 14:27:31 Asia/Tokyo] PHP Notice:  Undefined index: enemy_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 132
+[03-Oct-2019 14:27:31 Asia/Tokyo] PHP Notice:  Undefined index: enemy_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 133
+[03-Oct-2019 14:27:31 Asia/Tokyo] PHP Notice:  Undefined index: partner_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 133
+[03-Oct-2019 14:27:31 Asia/Tokyo] PHP Notice:  Undefined index: enemy_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 134
+[03-Oct-2019 14:27:31 Asia/Tokyo] PHP Notice:  Undefined index: enemy_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[03-Oct-2019 14:27:31 Asia/Tokyo] PHP Notice:  Undefined index: partner_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[03-Oct-2019 14:27:31 Asia/Tokyo] PHP Notice:  Undefined index: partner_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[03-Oct-2019 14:27:31 Asia/Tokyo] PHP Notice:  Undefined index: enemy_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[03-Oct-2019 14:27:31 Asia/Tokyo] PHP Notice:  Undefined index: enemy_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 139
+[03-Oct-2019 14:27:31 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 140
+[03-Oct-2019 14:27:37 Asia/Tokyo] PHP Notice:  Undefined index: partner_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 131
+[03-Oct-2019 14:27:37 Asia/Tokyo] PHP Notice:  Undefined index: partner_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 132
+[03-Oct-2019 14:27:37 Asia/Tokyo] PHP Notice:  Undefined index: partner_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 133
+[03-Oct-2019 14:27:37 Asia/Tokyo] PHP Notice:  Undefined index: partner_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[03-Oct-2019 14:27:38 Asia/Tokyo] PHP Notice:  Undefined index: partner_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 131
+[03-Oct-2019 14:27:38 Asia/Tokyo] PHP Notice:  Undefined index: partner_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 132
+[03-Oct-2019 14:27:38 Asia/Tokyo] PHP Notice:  Undefined index: partner_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 133
+[03-Oct-2019 14:27:38 Asia/Tokyo] PHP Notice:  Undefined index: partner_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[03-Oct-2019 14:29:14 Asia/Tokyo] PHP Notice:  Undefined index: partner_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 131
+[03-Oct-2019 14:29:14 Asia/Tokyo] PHP Notice:  Undefined index: partner_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 132
+[03-Oct-2019 14:29:14 Asia/Tokyo] PHP Notice:  Undefined index: enemy_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 132
+[03-Oct-2019 14:29:14 Asia/Tokyo] PHP Notice:  Undefined index: enemy_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 133
+[03-Oct-2019 14:29:14 Asia/Tokyo] PHP Notice:  Undefined index: partner_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 133
+[03-Oct-2019 14:29:14 Asia/Tokyo] PHP Notice:  Undefined index: enemy_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 134
+[03-Oct-2019 14:29:14 Asia/Tokyo] PHP Notice:  Undefined index: enemy_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[03-Oct-2019 14:29:14 Asia/Tokyo] PHP Notice:  Undefined index: partner_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[03-Oct-2019 14:29:14 Asia/Tokyo] PHP Notice:  Undefined index: partner_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[03-Oct-2019 14:29:14 Asia/Tokyo] PHP Notice:  Undefined index: enemy_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[03-Oct-2019 14:29:14 Asia/Tokyo] PHP Notice:  Undefined index: enemy_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 139
+[03-Oct-2019 14:29:14 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 140
+[03-Oct-2019 14:53:34 Asia/Tokyo] PHP Notice:  Undefined index: partner_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 131
+[03-Oct-2019 14:53:34 Asia/Tokyo] PHP Notice:  Undefined index: partner_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 132
+[03-Oct-2019 14:53:34 Asia/Tokyo] PHP Notice:  Undefined index: enemy_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 132
+[03-Oct-2019 14:53:34 Asia/Tokyo] PHP Notice:  Undefined index: enemy_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 133
+[03-Oct-2019 14:53:34 Asia/Tokyo] PHP Notice:  Undefined index: partner_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 133
+[03-Oct-2019 14:53:34 Asia/Tokyo] PHP Notice:  Undefined index: enemy_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[03-Oct-2019 14:53:34 Asia/Tokyo] PHP Notice:  Undefined index: partner_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 210
+[03-Oct-2019 14:53:46 Asia/Tokyo] PHP Notice:  Undefined index: partner_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 131
+[03-Oct-2019 14:53:46 Asia/Tokyo] PHP Notice:  Undefined index: partner_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 132
+[03-Oct-2019 14:53:46 Asia/Tokyo] PHP Notice:  Undefined index: enemy_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 132
+[03-Oct-2019 14:53:46 Asia/Tokyo] PHP Notice:  Undefined index: enemy_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 133
+[03-Oct-2019 14:53:46 Asia/Tokyo] PHP Notice:  Undefined index: partner_attack in /Applications/MAMP/htdocs/portfolio03/index.php on line 133
+[03-Oct-2019 14:53:46 Asia/Tokyo] PHP Notice:  Undefined index: enemy_name in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[03-Oct-2019 14:53:46 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[03-Oct-2019 14:53:46 Asia/Tokyo] PHP Notice:  Undefined index: partner_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 210
+[03-Oct-2019 14:53:49 Asia/Tokyo] PHP Notice:  Undefined index: partner_hp in /Applications/MAMP/htdocs/portfolio03/index.php on line 210
