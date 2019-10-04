@@ -80,12 +80,16 @@ class Partner extends Monster{
                 $attackPoint = (int)($attackPoint * 2.0);
                 break;
         }
-        if(!mt_rand(0, 9)){ // 10分の1の確率で急所に当てる
-            $attackPoint = (int)($attackPoint * 1.5);
-            History::set('きゅうしょにあたった!');
+        if(!mt_rand(0, 1)){ // 10分の1の確率で攻撃が外れる
+            History::set('こうげきはあたらなかった');
+        }else{
+            if(!mt_rand(0, 9)){ // 10分の1の確率で急所に当てる
+                $attackPoint = (int)($attackPoint * 1.5);
+                History::set('きゅうしょにあたった!');
+            }
+            $targetObj->setHp($targetObj->getHp() - $attackPoint);
+            History::set($targetObj->getName().'に'.$attackPoint.'ダメージあたえた');
         }
-        $targetObj->setHp($targetObj->getHp() - $attackPoint);
-        History::set($targetObj->getName().'に'.$attackPoint.'ダメージあたえた');
     }
     public function getAttackName(){
         $attackName = array(
@@ -106,12 +110,16 @@ class Enemy extends Monster{
     public function attack($targetObj){
         $attackPoint = $this->getAttack();
         History::set($this->getName().'のこうげき');
-        if(!mt_rand(0, 9)){ // 10分の1の確率で急所に当てる
-            $attackPoint = (int)($attackPoint * 1.5);
-            History::set('きゅうしょにあたった!');
+        if(!mt_rand(0, 9)){ // 10分の1の確率で攻撃が外れる
+            History::set('こうげきはあたらなかった');
+        }else{
+            if(!mt_rand(0, 9)){ // 10分の1の確率で急所に当てる
+                $attackPoint = (int)($attackPoint * 1.5);
+                History::set('きゅうしょにあたった!');
+            }
+            $targetObj->setHp($targetObj->getHp() - $attackPoint);
+            History::set($attackPoint.'ダメージうけた');
         }
-        $targetObj->setHp($targetObj->getHp() - $attackPoint);
-        History::set($attackPoint.'ダメージうけた');
     }
 }
 // 魔法を使う相手モンスター用クラス
@@ -124,9 +132,17 @@ class magicEnemy extends Enemy{
     public function attack($targetObj){
         $attackPoint = $this->getMagicAttack();
         if(!mt_rand(0, 4)){ // 5分の1の確率で魔法攻撃をする
-            $targetObj->setHp($targetObj->getHp() - $attackPoint);
             History::set($_SESSION['enemy']->getName().'のまほうこうげき');
-            History::set($attackPoint.'ダメージうけた');
+            if(!mt_rand(0, 9)){ // 10分の1の確率で攻撃が外れる
+                History::set('こうげきはあたらなかった');
+            }else{
+                if(!mt_rand(0, 9)){ // 10分の1の確率で急所に当てる
+                    $attackPoint = (int)($attackPoint * 1.5);
+                    History::set('きゅうしょにあたった!');
+                }
+                $targetObj->setHp($targetObj->getHp() - $attackPoint);
+                History::set($attackPoint.'ダメージうけた');
+            }
         }else{
             parent::attack($targetObj);
         }
