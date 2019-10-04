@@ -332,6 +332,7 @@ if(!empty($_POST)){
                 <div class="history">
                     <p class="history_text"><?php echo $_SESSION['history']; ?></p>
                 </div>
+                <!-- 最初に表示する行動選択画面 -->
                 <form class="choice-action active js-set-action" method="post">
                     <div class="btn-container">
                         <span>▶︎</span>
@@ -350,6 +351,7 @@ if(!empty($_POST)){
                         <input class="js-choice-action btn" type="submit" name="restart" value="やりなおす">
                     </div>
                 </form>
+                <!-- たたかうボタンが押された時に表示するアクション選択画面 -->
                 <form class="choice-action js-set-action" method="post">
                     <div class="btn-container">
                         <span>▶︎</span>
