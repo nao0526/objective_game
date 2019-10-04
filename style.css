@@ -34,7 +34,7 @@ img{
     width: 100%;
 }
 .site-width{
-    width: 50%;
+    width: 60%;
     margin: 100px auto;
 }
 .container{
@@ -52,7 +52,7 @@ img{
     color: white;
     padding: 15px 30px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .partner-group{
@@ -110,7 +110,7 @@ input[type="radio"]{
 }
 .historyAndAction{
     width: 100%;
-    height: 136px;
+    height: 160px;
     display: flex;
     justify-content: space-between;
     border: 1px solid white;
@@ -122,8 +122,12 @@ input[type="radio"]{
     border-right: double white;
     box-sizing: border-box;
     padding: 20px;
+    overflow: scroll;
 }
 .choice-action{
+    display: none;
+}
+.choice-action.active{
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -138,7 +142,7 @@ input[type="radio"]{
 .choice-action .btn-container span{
     display: none;
     position: absolute;
-    top: 18px;
+    top: 26px;
     left: 14px
 }
 .choice-action .btn-container:hover span{
@@ -149,6 +153,8 @@ input[type="radio"]{
     height: 100%;
     text-align: left;
     border: none;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 .defeat-number{
     text-align: center; 
