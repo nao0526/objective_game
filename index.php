@@ -80,7 +80,7 @@ class Partner extends Monster{
                 $attackPoint = (int)($attackPoint * 2.0);
                 break;
         }
-        if(!mt_rand(0, 1)){ // 10分の1の確率で攻撃が外れる
+        if(!mt_rand(0, 9)){ // 10分の1の確率で攻撃が外れる
             History::set('こうげきはあたらなかった');
         }else{
             if(!mt_rand(0, 9)){ // 10分の1の確率で急所に当てる
@@ -281,7 +281,8 @@ if(!empty($_POST)){
         <?php if(empty($_SESSION)): ?>
         <h1>プロモンかちぬきリーグ!</h1>
         <h2>すきなプロモンをえらんでね!</h2>
-        <form class="container" method="post" action="">
+        <form class="container js-submit-scroll" method="post" action="">
+            <input class="js-scroll-top" type="hidden" name="scroll_top" value="">
             <div class="partner-group js-toggle-active">
                 <input id="partner1" type="radio" name="partner" value="1">
                 <label for="partner1">
@@ -301,7 +302,8 @@ if(!empty($_POST)){
                 </label>
             </div>
             <div class="btn-container">
-                <input class="btn" type="submit" name="start" value="▶︎キミにきめた！">
+                <span>▶︎</span>
+                <input class="btn" type="submit" name="start" value="キミにきめた！">
             </div>
         </form>
          <!-- バトル画面 -->
@@ -333,7 +335,8 @@ if(!empty($_POST)){
                     <p class="history_text"><?php echo $_SESSION['history']; ?></p>
                 </div>
                 <!-- 最初に表示する行動選択画面 -->
-                <form class="choice-action active js-set-action" method="post">
+                <form class="choice-action active js-set-action js-submit-scroll" method="post">
+                    <input class="js-scroll-top" type="hidden" name="scroll_top" value="">
                     <div class="btn-container">
                         <span>▶︎</span>
                         <input class="js-choice-action js-toggle-action btn" type="submit" name="attack" value="たたかう">
@@ -352,7 +355,8 @@ if(!empty($_POST)){
                     </div>
                 </form>
                 <!-- たたかうボタンが押された時に表示するアクション選択画面 -->
-                <form class="choice-action js-set-action" method="post">
+                <form class="choice-action js-set-action js-submit-scroll" method="post">
+                    <input class="js-scroll-top" type="hidden" name="scroll_top" value="">
                     <div class="btn-container">
                         <span>▶︎</span>
                         <input class="js-choice-action btn" type="submit" name="attack" value="<?php echo $attackName['attackName1']; ?>">
@@ -373,12 +377,17 @@ if(!empty($_POST)){
             </div>
         </div>
         <?php else: ?>
+        
         <!-- ゲームオーバー画面 -->
-        <h1>GAME OVER</h1>
-        <p class="defeat-number">たおしたモンスター ： <?php echo $_SESSION['knockDownCount']; ?>ひき</p>
-        <form class="btn-container" method="post">
-            <input class="btn" type="submit" name="restart" value="やりなおす">
-        </form>
+        <div class="container">
+            <h1>GAME OVER</h1>
+            <h2>たおしたモンスター ： <?php echo $_SESSION['knockDownCount']; ?>ひき</h2>
+            <form class="btn-container js-submit-scroll" method="post">
+                <input class="js-scroll-top" type="hidden" name="scroll_top" value="">
+                <span>▶︎</span>
+                <input class="btn" type="submit" name="restart" value="やりなおす">
+            </form>
+        </div>
         <?php endif; ?>
     </section>
     <script
@@ -386,5 +395,10 @@ if(!empty($_POST)){
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    <script>
+    window.onload = function(){
+        $(window).scrollTop(<?php echo $_POST['scroll_top']; ?>);
+    }
+    </script>
 </body>
 </html>

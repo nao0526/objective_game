@@ -534,3 +534,43 @@ Stack trace:
 [05-Oct-2019 01:17:08 Asia/Tokyo] PHP Fatal error:  Cannot make non static method HistoryInterface::set() static in class History in /Applications/MAMP/htdocs/portfolio03/index.php on line 143
 [05-Oct-2019 01:17:10 Asia/Tokyo] PHP Fatal error:  Cannot make non static method HistoryInterface::set() static in class History in /Applications/MAMP/htdocs/portfolio03/index.php on line 143
 [05-Oct-2019 01:17:21 Asia/Tokyo] PHP Fatal error:  Cannot make non static method HistoryInterface::set() static in class History in /Applications/MAMP/htdocs/portfolio03/index.php on line 143
+[05-Oct-2019 21:30:16 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 395
+[05-Oct-2019 21:31:35 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 395
+[05-Oct-2019 21:34:16 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 395
+[05-Oct-2019 21:35:10 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 361
+[05-Oct-2019 21:35:10 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 365
+[05-Oct-2019 21:35:10 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 369
+[05-Oct-2019 21:35:10 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 373
+[05-Oct-2019 21:35:10 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 395
+[05-Oct-2019 21:35:20 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 361
+[05-Oct-2019 21:35:20 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 365
+[05-Oct-2019 21:35:20 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 369
+[05-Oct-2019 21:35:20 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 373
+[05-Oct-2019 21:35:20 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 395
+[05-Oct-2019 21:35:22 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 361
+[05-Oct-2019 21:35:22 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 365
+[05-Oct-2019 21:35:22 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 369
+[05-Oct-2019 21:35:22 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 373
+[05-Oct-2019 21:35:22 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 395
+[05-Oct-2019 21:35:24 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 361
+[05-Oct-2019 21:35:24 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 365
+[05-Oct-2019 21:35:24 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 369
+[05-Oct-2019 21:35:24 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 373
+[05-Oct-2019 21:35:24 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 395
+[05-Oct-2019 21:35:25 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 361
+[05-Oct-2019 21:35:25 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 365
+[05-Oct-2019 21:35:25 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 369
+[05-Oct-2019 21:35:25 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 373
+[05-Oct-2019 21:35:25 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 395
+[05-Oct-2019 21:35:36 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 395
+[05-Oct-2019 21:36:29 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 395
+[05-Oct-2019 21:37:26 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 395
+[05-Oct-2019 21:54:11 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 383
+[05-Oct-2019 21:54:58 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 383
+[05-Oct-2019 21:57:54 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 383
+[05-Oct-2019 21:57:55 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 383
+[05-Oct-2019 22:00:33 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 384
+[05-Oct-2019 22:01:12 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 384
+[05-Oct-2019 22:01:12 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 384
+[05-Oct-2019 22:01:14 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 384
+[05-Oct-2019 22:04:32 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 400
