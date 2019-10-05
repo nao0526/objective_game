@@ -14,7 +14,9 @@ $(function(){
     // フォームを送信するときに位置を保持
     $jsSubmitScroll = $('.js-submit-scroll');
     $jsSubmitScroll.submit(function(){
+
         var scroll_top = $(window).scrollTop();
+        // 隠しフィールドに位置情報を設定
         $('.js-scroll-top', this).prop('value', scroll_top);
     });
 });

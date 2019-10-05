@@ -4,6 +4,7 @@ ini_set('log_errors','on');  //ログを取るか
 ini_set('error_log','php.log');  //ログの出力ファイルを指定
 session_start(); //セッション使う
 
+// きずぐすり回復ポイント
 define('RECOVERY_POINT', 100);
 
 // インスタンス格納用変数
@@ -147,6 +148,7 @@ class magicEnemy extends Enemy{
             parent::attack($targetObj);
         }
     }
+    // ゲッター
     public function getMagicAttack(){
         return $this->magicAttack;
     }
@@ -377,7 +379,6 @@ if(!empty($_POST)){
             </div>
         </div>
         <?php else: ?>
-        
         <!-- ゲームオーバー画面 -->
         <div class="container">
             <h1>GAME OVER</h1>
@@ -396,8 +397,9 @@ if(!empty($_POST)){
         crossorigin="anonymous"></script>
     <script src="app.js"></script>
     <script>
+    // ロード時に隠しフィールドから取得した値で位置をスクロール
     window.onload = function(){
-        $(window).scrollTop(<?php echo $_POST['scroll_top']; ?>);
+        $(window).scrollTop(<?php if(!empty($_POST['scroll_top'])) echo $_POST['scroll_top']; ?>);
     }
     </script>
 </body>
