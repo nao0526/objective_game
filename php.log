@@ -574,3 +574,153 @@ Stack trace:
 [05-Oct-2019 22:01:12 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 384
 [05-Oct-2019 22:01:14 Asia/Tokyo] PHP Notice:  Undefined index: knockDownCount in /Applications/MAMP/htdocs/portfolio03/index.php on line 384
 [05-Oct-2019 22:04:32 Asia/Tokyo] PHP Notice:  Undefined index: scroll_top in /Applications/MAMP/htdocs/portfolio03/index.php on line 400
+[06-Oct-2019 01:09:25 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 364
+[06-Oct-2019 01:09:25 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 368
+[06-Oct-2019 01:09:25 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 372
+[06-Oct-2019 01:09:25 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 376
+[06-Oct-2019 23:54:01 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function getAttacMP() in /Applications/MAMP/htdocs/portfolio03/index.php:74
+Stack trace:
+#0 /Applications/MAMP/htdocs/portfolio03/index.php(276): Partner->attack(Object(Enemy))
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/portfolio03/index.php on line 74
+[06-Oct-2019 23:54:08 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function getAttacMP() in /Applications/MAMP/htdocs/portfolio03/index.php:74
+Stack trace:
+#0 /Applications/MAMP/htdocs/portfolio03/index.php(276): Partner->attack(Object(Enemy))
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/portfolio03/index.php on line 74
+[06-Oct-2019 23:54:31 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function getAttacMp() in /Applications/MAMP/htdocs/portfolio03/index.php:74
+Stack trace:
+#0 /Applications/MAMP/htdocs/portfolio03/index.php(276): Partner->attack(Object(Enemy))
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/portfolio03/index.php on line 74
+[06-Oct-2019 23:54:33 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function getAttacMp() in /Applications/MAMP/htdocs/portfolio03/index.php:74
+Stack trace:
+#0 /Applications/MAMP/htdocs/portfolio03/index.php(276): Partner->attack(Object(Enemy))
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/portfolio03/index.php on line 74
+[06-Oct-2019 23:54:47 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function getAttacMp() in /Applications/MAMP/htdocs/portfolio03/index.php:74
+Stack trace:
+#0 /Applications/MAMP/htdocs/portfolio03/index.php(276): Partner->attack(Object(Enemy))
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/portfolio03/index.php on line 74
+[06-Oct-2019 23:54:50 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function getAttacMp() in /Applications/MAMP/htdocs/portfolio03/index.php:74
+Stack trace:
+#0 /Applications/MAMP/htdocs/portfolio03/index.php(276): Partner->attack(Object(Enemy))
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/portfolio03/index.php on line 74
+[06-Oct-2019 23:55:02 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function getAttackMp() in /Applications/MAMP/htdocs/portfolio03/index.php:74
+Stack trace:
+#0 /Applications/MAMP/htdocs/portfolio03/index.php(276): Partner->attack(Object(Enemy))
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/portfolio03/index.php on line 74
+[06-Oct-2019 23:55:23 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function getAttackMp() in /Applications/MAMP/htdocs/portfolio03/index.php:74
+Stack trace:
+#0 /Applications/MAMP/htdocs/portfolio03/index.php(276): Partner->attack(Object(Enemy))
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/portfolio03/index.php on line 74
+[06-Oct-2019 23:55:48 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac1_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[06-Oct-2019 23:55:48 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac2_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[06-Oct-2019 23:55:48 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac3_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 137
+[06-Oct-2019 23:55:48 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac4_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 138
+[06-Oct-2019 23:56:04 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac1_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[06-Oct-2019 23:56:04 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac2_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[06-Oct-2019 23:56:04 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac3_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 137
+[06-Oct-2019 23:56:04 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac4_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 138
+[06-Oct-2019 23:56:12 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac1_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[06-Oct-2019 23:56:12 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac2_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[06-Oct-2019 23:56:12 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac3_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 137
+[06-Oct-2019 23:56:12 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac4_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 138
+[06-Oct-2019 23:57:28 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac1_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[06-Oct-2019 23:57:28 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac2_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[06-Oct-2019 23:57:28 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac3_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 137
+[06-Oct-2019 23:57:28 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac4_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 138
+[06-Oct-2019 23:57:37 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac1_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[06-Oct-2019 23:57:37 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac2_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[06-Oct-2019 23:57:37 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac3_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 137
+[06-Oct-2019 23:57:37 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac4_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 138
+[06-Oct-2019 23:57:38 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac1_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[06-Oct-2019 23:57:38 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac2_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[06-Oct-2019 23:57:38 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac3_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 137
+[06-Oct-2019 23:57:38 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac4_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 138
+[06-Oct-2019 23:58:52 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac1_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[06-Oct-2019 23:58:52 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac2_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[06-Oct-2019 23:58:52 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac3_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 137
+[06-Oct-2019 23:58:52 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac4_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 138
+[07-Oct-2019 00:00:28 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac1_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[07-Oct-2019 00:00:28 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac2_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[07-Oct-2019 00:00:28 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac3_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 137
+[07-Oct-2019 00:00:28 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac4_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 138
+[07-Oct-2019 00:00:28 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac1_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[07-Oct-2019 00:00:28 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac2_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[07-Oct-2019 00:00:28 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac3_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 137
+[07-Oct-2019 00:00:28 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac4_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 138
+[07-Oct-2019 00:01:07 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac1_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 135
+[07-Oct-2019 00:01:07 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac2_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 136
+[07-Oct-2019 00:01:07 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac3_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 137
+[07-Oct-2019 00:01:07 Asia/Tokyo] PHP Notice:  Undefined property: Partner::$attac4_mp in /Applications/MAMP/htdocs/portfolio03/index.php on line 138
+[07-Oct-2019 00:37:25 Asia/Tokyo] PHP Notice:  Array to string conversion in /Applications/MAMP/htdocs/portfolio03/index.php on line 323
+[07-Oct-2019 00:37:25 Asia/Tokyo] PHP Notice:  Undefined property: Recovery::$Array in /Applications/MAMP/htdocs/portfolio03/index.php on line 323
+[07-Oct-2019 00:37:25 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function attack() on null in /Applications/MAMP/htdocs/portfolio03/index.php:323
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/portfolio03/index.php on line 323
+[07-Oct-2019 01:23:41 Asia/Tokyo] PHP Notice:  Undefined index: attack1MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 418
+[07-Oct-2019 01:23:41 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 419
+[07-Oct-2019 01:23:41 Asia/Tokyo] PHP Notice:  Undefined index: attack2MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 423
+[07-Oct-2019 01:23:41 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 424
+[07-Oct-2019 01:23:41 Asia/Tokyo] PHP Notice:  Undefined index: attack3MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 428
+[07-Oct-2019 01:23:41 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 429
+[07-Oct-2019 01:23:41 Asia/Tokyo] PHP Notice:  Undefined index: attack4MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 433
+[07-Oct-2019 01:23:41 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 434
+[07-Oct-2019 01:23:56 Asia/Tokyo] PHP Notice:  Undefined index: attack1MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 418
+[07-Oct-2019 01:23:56 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 419
+[07-Oct-2019 01:23:56 Asia/Tokyo] PHP Notice:  Undefined index: attack2MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 423
+[07-Oct-2019 01:23:56 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 424
+[07-Oct-2019 01:23:56 Asia/Tokyo] PHP Notice:  Undefined index: attack3MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 428
+[07-Oct-2019 01:23:56 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 429
+[07-Oct-2019 01:23:56 Asia/Tokyo] PHP Notice:  Undefined index: attack4MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 433
+[07-Oct-2019 01:23:56 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 434
+[07-Oct-2019 01:23:57 Asia/Tokyo] PHP Notice:  Undefined index: attack1MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 418
+[07-Oct-2019 01:23:57 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 419
+[07-Oct-2019 01:23:57 Asia/Tokyo] PHP Notice:  Undefined index: attack2MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 423
+[07-Oct-2019 01:23:57 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 424
+[07-Oct-2019 01:23:57 Asia/Tokyo] PHP Notice:  Undefined index: attack3MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 428
+[07-Oct-2019 01:23:57 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 429
+[07-Oct-2019 01:23:57 Asia/Tokyo] PHP Notice:  Undefined index: attack4MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 433
+[07-Oct-2019 01:23:57 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 434
+[07-Oct-2019 01:24:00 Asia/Tokyo] PHP Notice:  Undefined index: attack1MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 418
+[07-Oct-2019 01:24:00 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 419
+[07-Oct-2019 01:24:00 Asia/Tokyo] PHP Notice:  Undefined index: attack2MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 423
+[07-Oct-2019 01:24:00 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 424
+[07-Oct-2019 01:24:00 Asia/Tokyo] PHP Notice:  Undefined index: attack3MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 428
+[07-Oct-2019 01:24:00 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 429
+[07-Oct-2019 01:24:00 Asia/Tokyo] PHP Notice:  Undefined index: attack4MaxMp in /Applications/MAMP/htdocs/portfolio03/index.php on line 433
+[07-Oct-2019 01:24:00 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 434
+[07-Oct-2019 01:24:02 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 419
+[07-Oct-2019 01:24:02 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 424
+[07-Oct-2019 01:24:02 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 429
+[07-Oct-2019 01:24:02 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 434
+[07-Oct-2019 01:24:06 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 419
+[07-Oct-2019 01:24:06 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 424
+[07-Oct-2019 01:24:06 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 429
+[07-Oct-2019 01:24:06 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 434
+[07-Oct-2019 01:24:27 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 421
+[07-Oct-2019 01:24:27 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 426
+[07-Oct-2019 01:24:27 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 431
+[07-Oct-2019 01:24:27 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 436
+[07-Oct-2019 01:24:30 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 421
+[07-Oct-2019 01:24:30 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 426
+[07-Oct-2019 01:24:30 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 431
+[07-Oct-2019 01:24:30 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 436
+[07-Oct-2019 01:25:24 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 421
+[07-Oct-2019 01:25:24 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 426
+[07-Oct-2019 01:25:24 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 431
+[07-Oct-2019 01:25:24 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 436
+[07-Oct-2019 01:25:39 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 421
+[07-Oct-2019 01:25:39 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 426
+[07-Oct-2019 01:25:39 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 431
+[07-Oct-2019 01:25:39 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 436
+[07-Oct-2019 01:25:48 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 421
+[07-Oct-2019 01:25:48 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 426
+[07-Oct-2019 01:25:48 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 431
+[07-Oct-2019 01:25:48 Asia/Tokyo] PHP Notice:  Undefined variable: attackName in /Applications/MAMP/htdocs/portfolio03/index.php on line 436

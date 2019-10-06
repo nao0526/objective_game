@@ -4,9 +4,6 @@ ini_set('log_errors','on');  //ログを取るか
 ini_set('error_log','php.log');  //ログの出力ファイルを指定
 session_start(); //セッション使う
 
-// きずぐすり回復ポイント
-define('RECOVERY_POINT', 100);
-
 // インスタンス格納用変数
 $partner = array();
 $enemy = array();
@@ -53,13 +50,21 @@ class Partner extends Monster{
     private $attackName2;
     private $attackName3;
     private $attackName4;
+    private $attack1_mp;
+    private $attack2_mp;
+    private $attack3_mp;
+    private $attack4_mp;
 
-    public function __construct($name, $hp, $img, $attack, $attackName1, $attackName2, $attackName3, $attackName4){
+    public function __construct($name, $hp, $img, $attack, $attackName1, $attackName2, $attackName3, $attackName4, $attack1_mp, $attack2_mp, $attack3_mp, $attack4_mp){
         parent::__construct($name, $hp, $img, $attack);
         $this->attackName1 = $attackName1;
         $this->attackName2 = $attackName2;
         $this->attackName3 = $attackName3;
         $this->attackName4 = $attackName4;
+        $this->attack1_mp = $attack1_mp;
+        $this->attack2_mp = $attack2_mp;
+        $this->attack3_mp = $attack3_mp;
+        $this->attack4_mp = $attack4_mp;
     }
     public function attack($targetObj){
         $attackPoint = $_SESSION['partner']->getAttack();
@@ -70,15 +75,19 @@ class Partner extends Monster{
         switch ($attackName) {
             case $this->attackName1:
                 $attackPoint = (int)($attackPoint * 1.2);
+                $this->setAttackMp($_SESSION['partner']->getAttackMp('attack1_mp') - 1, $attackName);
                 break;
             case $this->attackName2:
                 $attackPoint = (int)($attackPoint * 1.5);
+                $this->setAttackMp($_SESSION['partner']->getAttackMp('attack2_mp') - 1, $attackName);
                 break;
             case $this->attackName3:
                 $attackPoint = (int)($attackPoint * 1.7);
+                $this->setAttackMp($_SESSION['partner']->getAttackMp('attack3_mp') - 1, $attackName);
                 break;
             default:
                 $attackPoint = (int)($attackPoint * 2.0);
+                $this->setAttackMp($_SESSION['partner']->getAttackMp('attack4_mp') - 1, $attackName);
                 break;
         }
         if(!mt_rand(0, 9)){ // 10分の1の確率で攻撃が外れる
@@ -92,14 +101,27 @@ class Partner extends Monster{
             History::set($targetObj->getName().'に'.$attackPoint.'ダメージあたえた');
         }
     }
-    public function getAttackName(){
-        $attackName = array(
-            'attackName1' => $this->attackName1,
-            'attackName2' => $this->attackName2, 
-            'attackName3' => $this->attackName3, 
-            'attackName4' => $this->attackName4, 
-        );
-        return $attackName;
+    public function setAttackMp($num, $attackName){
+        switch ($attackName) {
+            case $this->attackName1:
+                $this->attack1_mp = $num;
+                break;
+            case $this->attackName2:
+                $this->attack2_mp = $num;
+                break;
+            case $this->attackName3:
+                $this->attack3_mp = $num;
+                break;
+            default:
+                $this->attack4_mp = $num;
+                break;
+        }
+    }
+    public function getAttackName($attackName){
+        return $this->$attackName;
+    }
+    public function getAttackMp($attackNum){
+        return $this->$attackNum;
     }
 }
 // 相手モンスター用クラス
@@ -153,6 +175,35 @@ class magicEnemy extends Enemy{
         return $this->magicAttack;
     }
 }
+class Recovery{
+    const RECOVERY_POINT = 100;
+    
+    private $recoveryMp;
+
+    public function __construct($recoveryMp){
+        $this->recoveryMp = $recoveryMp;
+    }
+    public function recovery(){
+        $recoveryPoint = 0;
+        History::set('きずぐすりをつかった');
+        if(($_SESSION['partner_maxhp'] - $_SESSION['partner']->getHp() >= self::RECOVERY_POINT)){ // HPのMAX値と現在のHPの差がきずぐすりの回復力以上だった場合
+            $recoveryPoint = self::RECOVERY_POINT;
+            var_dump(self::RECOVERY_POINT);
+            $_SESSION['partner']->setHp($_SESSION['partner']->getHp() + self::RECOVERY_POINT);
+        }else{ // HPのMAX値と現在のHPの差がきずぐすりの回復力未満だった場合
+            $recoveryPoint = ($_SESSION['partner_maxhp'] - $_SESSION['partner']->getHp());
+            $_SESSION['partner']->setHp($_SESSION['partner_maxhp']);
+        }
+        History::set($_SESSION['partner']->getName().'は'.$recoveryPoint.'かいふくした');
+        $this->setMp($this->getMp() - 1);
+    }
+    public function setMp($num){
+        $this->recoveryMp = $num;
+    }
+    public function getMp(){
+        return $this->recoveryMp;
+    }
+}
 interface HistoryInterface{
     public static function set($str);
     public static function clear();
@@ -174,18 +225,18 @@ class History implements HistoryInterface{
     }
 }
 // パートナーインスタンス生成
-$partner[] = new Partner('きつねこ', '300', 'img/partner1-2.png', mt_rand(30, 60), 'たいあたり', 'みだれひっかき', 'ねんりき', 'サイコキネシス');
-$partner[] = new Partner('こどら', '300', 'img/partner2-2.png', mt_rand(30, 60), 'たいあたり', 'ひのこ', 'かえんほうしゃ', 'オーバーヒート');
-$partner[] = new Partner('うまこーん', '300', 'img/partner3-2.png', mt_rand(30, 60), 'たいあたり', 'うしろげり', 'とっしん', 'うまびーむ');
+$partner[] = new Partner('きつねこ', 300, 'img/partner1-2.png', mt_rand(30, 60), 'たいあたり', 'みだれひっかき', 'ねんりき', 'サイコキネシス', 15, 10, 7, 5);
+$partner[] = new Partner('こどら', 300, 'img/partner2-2.png', mt_rand(30, 60), 'たいあたり', 'ひのこ', 'かえんほうしゃ', 'オーバーヒート', 15, 10, 7, 5);
+$partner[] = new Partner('うまこーん', 300, 'img/partner3-2.png', mt_rand(30, 60), 'たいあたり', 'うしろげり', 'とっしん', 'うまびーむ', 15, 10, 7, 5);
 // 相手モンスターインスタンス生成
-$enemy[] = new Enemy('おーくまん', '300', 'img/monster1.png', mt_rand(30, 60));
-$enemy[] = new magicEnemy('たいちょう', '300', 'img/monster2.png', mt_rand(30, 60), mt_rand(40, 80));
-$enemy[] = new Enemy('でぃあんぬ', '300', 'img/monster3.png', mt_rand(20, 60));
-$enemy[] = new magicEnemy('ぞんびーむ', '300', 'img/monster4.png', mt_rand(30, 50), mt_rand(50, 70));
-$enemy[] = new Enemy('はくなまたた', '300', 'img/monster5.png', mt_rand(40,  60));
-$enemy[] = new magicEnemy('たつたのすけ', '300', 'img/monster6.png', mt_rand(20, 40), mt_rand(30, 70));
-$enemy[] = new Enemy('どっすん', '300', 'img/monster7.png', mt_rand(30, 40));
-$enemy[] = new magicEnemy('むらさきおじさん', '300', 'img/monster8.png', mt_rand(20, 40), mt_rand(40, 80));
+$enemy[] = new Enemy('おーくまん', 300, 'img/monster1.png', mt_rand(30, 60));
+$enemy[] = new magicEnemy('たいちょう', 300, 'img/monster2.png', mt_rand(30, 60), mt_rand(40, 80));
+$enemy[] = new Enemy('でぃあんぬ', 300, 'img/monster3.png', mt_rand(20, 60));
+$enemy[] = new magicEnemy('ぞんびーむ', 300, 'img/monster4.png', mt_rand(30, 50), mt_rand(50, 70));
+$enemy[] = new Enemy('はくなまたた', 300, 'img/monster5.png', mt_rand(40,  60));
+$enemy[] = new magicEnemy('たつたのすけ', 300, 'img/monster6.png', mt_rand(20, 40), mt_rand(30, 70));
+$enemy[] = new Enemy('どっすん', 300, 'img/monster7.png', mt_rand(30, 40));
+$enemy[] = new magicEnemy('むらさきおじさん', 300, 'img/monster8.png', mt_rand(20, 40), mt_rand(40, 80));
 // 相手モンスター生成関数
 function createEnemy(){
     global $enemy;
@@ -211,6 +262,14 @@ function createPartner(){
             break;
     }
     $_SESSION['partner_maxhp'] = $_SESSION['partner']->getHp();
+    for($i = 1; $i < 5; $i++){
+        $_SESSION['attack'.$i.'MaxMp'] = $_SESSION['partner']->getAttackMp('attack'.$i.'_mp');
+    }
+}
+function createRecovery(){
+    $_SESSION['recovery'] = new Recovery(mt_rand(5, 10));
+    $_SESSION['recovery_maxMp'] = $_SESSION['recovery']->getMp();
+    var_dump($_SESSION['recovery_maxMp']);
 }
 // 初期化用関数
 function init(){
@@ -218,6 +277,7 @@ function init(){
     $_SESSION['knockDownCount'] = 0;
     createEnemy();
     createPartner();
+    createRecovery();
 }
 // リスタート用関数（セッション初期化用）
 function restart(){
@@ -244,16 +304,7 @@ if(!empty($_POST)){
                 $_SESSION['enemy']->attack($_SESSION['partner']);
             }
         }elseif($recoveryFlg){ //きずぐすりボタンが押された場合
-            $recoveryPoint = 0;
-            History::set('きずぐすりをつかった');
-            if(($_SESSION['partner_maxhp'] - $_SESSION['partner']->getHp() >= RECOVERY_POINT)){ // HPのMAX値と現在のHPの差がきずぐすりの回復力以上だった場合
-                $recoveryPoint = RECOVERY_POINT;
-                $_SESSION['partner']->setHp($_SESSION['partner']->getHp() + RECOVERY_POINT);
-            }else{ // HPのMAX値と現在のHPの差がきずぐすりの回復力未満だった場合
-                $recoveryPoint = ($_SESSION['partner_maxhp'] - $_SESSION['partner']->getHp());
-                $_SESSION['partner']->setHp($_SESSION['partner_maxhp']);
-            }
-            History::set($_SESSION['partner']->getName().'は'.$recoveryPoint.'かいふくした');
+            $_SESSION['recovery']->recovery();
             // 相手が攻撃をする
             $_SESSION['enemy']->attack($_SESSION['partner']);
         }elseif($escapeFlg){ //逃げるボタンが押された場合
@@ -263,9 +314,10 @@ if(!empty($_POST)){
             restart();
         }
     }
-    if(!empty($_SESSION['partner'])){ // パートナーのアタックネームを変数に格納
-        $attackName = $_SESSION['partner']->getAttackName();
-    }
+    // if(!empty($_SESSION['partner'])){ // パートナーのアタックネームを変数に格納
+    //     $attackName = $_SESSION['partner']->getAttackName();
+    //     $attackMp = $_SESSION['partner']->getAttackMp();
+    // }
 }
  ?>
 <!DOCTYPE html>
@@ -304,7 +356,7 @@ if(!empty($_POST)){
                 </label>
             </div>
             <div class="btn-container">
-                <span>▶︎</span>
+                <span class="action-hover">▶︎</span>
                 <input class="btn" type="submit" name="start" value="キミにきめた！">
             </div>
         </form>
@@ -340,19 +392,20 @@ if(!empty($_POST)){
                 <form class="choice-action active js-set-action js-submit-scroll" method="post">
                     <input class="js-scroll-top" type="hidden" name="scroll_top" value="">
                     <div class="btn-container">
-                        <span>▶︎</span>
+                        <span class="action-hover">▶︎</span>
                         <input class="js-choice-action js-toggle-action btn" type="submit" name="attack" value="たたかう">
                     </div>
                     <div class="btn-container">
-                        <span>▶︎</span>
-                        <input class="js-choice-action btn" type="submit" name="recovery" value="きずぐすり">
+                        <span class="action-hover">▶︎</span>
+                        <span class="mp"><?php echo $_SESSION['recovery']->getMp().'/'.$_SESSION['recovery_maxMp']; ?></span>
+                        <input class="js-choice-action btn" type="submit" name="recovery" value="きずぐすり" <?php if(($_SESSION['partner']->getHp() === $_SESSION['partner_maxhp']) || $_SESSION['recovery']->getMp() === 0) echo 'disabled'; ?>>
                     </div>
                     <div class="btn-container">
-                        <span>▶︎</span>
+                        <span class="action-hover">▶︎</span>
                         <input class="js-choice-action btn" type="submit" name="escape" value="にげる">
                     </div>
                     <div class="btn-container">
-                        <span>▶︎</span>
+                        <span class="action-hover">▶︎</span>
                         <input class="js-choice-action btn" type="submit" name="restart" value="やりなおす">
                     </div>
                 </form>
@@ -360,20 +413,24 @@ if(!empty($_POST)){
                 <form class="choice-action js-set-action js-submit-scroll" method="post">
                     <input class="js-scroll-top" type="hidden" name="scroll_top" value="">
                     <div class="btn-container">
-                        <span>▶︎</span>
-                        <input class="js-choice-action btn" type="submit" name="attack" value="<?php echo $attackName['attackName1']; ?>">
+                        <span class="action-hover">▶︎</span>
+                        <span class="mp"><?php echo $_SESSION['partner']->getAttackMp('attack1_mp').'/'.$_SESSION['attack1MaxMp']; ?></span>
+                        <input class="js-choice-action btn" type="submit" name="attack" value="<?php echo $_SESSION['partner']->getAttackName('attackName1'); ?>" <?php if($_SESSION['partner']->getAttackMp('attack1_mp') === 0) echo 'disabled'; ?>>
                     </div>
                     <div class="btn-container">
-                        <span>▶︎</span>
-                        <input class="js-choice-action btn" type="submit" name="attack" value="<?php echo $attackName['attackName2']; ?>">
+                        <span class="action-hover">▶︎</span>
+                        <span class="mp"><?php echo $_SESSION['partner']->getAttackMp('attack2_mp').'/'.$_SESSION['attack2MaxMp']; ?></span>
+                        <input class="js-choice-action btn" type="submit" name="attack" value="<?php echo $_SESSION['partner']->getAttackName('attackName2'); ?>" <?php if($_SESSION['partner']->getAttackMp('attack2_mp') === 0) echo 'disabled'; ?>>
                     </div>
                     <div class="btn-container">
-                        <span>▶︎</span>
-                        <input class="js-choice-action btn" type="submit" name="attack" value="<?php echo $attackName['attackName3']; ?>">
+                        <span class="action-hover">▶︎</span>
+                        <span class="mp"><?php echo $_SESSION['partner']->getAttackMp('attack3_mp').'/'.$_SESSION['attack3MaxMp']; ?></span>
+                        <input class="js-choice-action btn" type="submit" name="attack" value="<?php echo $_SESSION['partner']->getAttackName('attackName3'); ?>" <?php if($_SESSION['partner']->getAttackMp('attack3_mp') === 0) echo 'disabled'; ?>>
                     </div>
                     <div class="btn-container">
-                        <span>▶︎</span>
-                        <input class="js-choice-action btn" type="submit" name="attack" value="<?php echo $attackName['attackName4']; ?>">
+                        <span class="action-hover">▶︎</span>
+                        <span class="mp"><?php echo $_SESSION['partner']->getAttackMp('attack4_mp').'/'.$_SESSION['attack4MaxMp']; ?></span>
+                        <input class="js-choice-action btn" type="submit" name="attack" value="<?php echo $_SESSION['partner']->getAttackName('attackName4'); ?>" <?php if($_SESSION['partner']->getAttackMp('attack4_mp') === 0) echo 'disabled'; ?>>
                     </div>
                 </form>
             </div>
@@ -385,7 +442,7 @@ if(!empty($_POST)){
             <h2>たおしたモンスター ： <?php echo $_SESSION['knockDownCount']; ?>ひき</h2>
             <form class="btn-container js-submit-scroll" method="post">
                 <input class="js-scroll-top" type="hidden" name="scroll_top" value="">
-                <span>▶︎</span>
+                <span class="action-hover">▶︎</span>
                 <input class="btn" type="submit" name="restart" value="やりなおす">
             </form>
         </div>
