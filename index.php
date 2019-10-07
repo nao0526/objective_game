@@ -269,7 +269,6 @@ function createPartner(){
 function createRecovery(){
     $_SESSION['recovery'] = new Recovery(mt_rand(5, 10));
     $_SESSION['recovery_maxMp'] = $_SESSION['recovery']->getMp();
-    var_dump($_SESSION['recovery_maxMp']);
 }
 // 初期化用関数
 function init(){
